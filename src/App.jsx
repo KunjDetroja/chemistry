@@ -239,17 +239,17 @@ function App() {
       <h1 className="text-3xl font-bold text-center py-5">
         Welcome to my Chemistry lab
       </h1>
-      <div className="p-4 max-w-md mx-auto relative">
+      <div className="p-4 max-w-md mx-auto relative flex flex-col gap-3 justify-center items-center">
         <h1 className="text-2xl font-bold mb-4 text-center">Product Search</h1>
         <input
           type="text"
           value={searchTerm}
           onChange={handleSearch}
-          className="w-full p-2 border border-gray-300 rounded mb-4"
+          className="w-[200px] p-2 border  border-gray-300 rounded mb-4"
           placeholder="Search for a product..."
         />
         {dropdownVisible && (
-          <ul className="absolute w-full bg-white border border-gray-300 rounded shadow-lg mt-1 max-h-60 overflow-auto">
+          <ul className="absolute top-[80%] w-full max-w-[200px] bg-white border border-gray-300 rounded shadow-lg mt-1 max-h-60 overflow-auto">
             {filteredProducts.length ? (
               filteredProducts.map((product, index) => (
                 <li
@@ -267,15 +267,15 @@ function App() {
         )}
       </div>
       {recipes.length > 0 ? (
-        <div className="p-4 max-w-md mx-auto">
+        <div className="p-4 w-fit mx-auto">
           <h1 className="text-2xl font-bold mb-4 text-center">Recipe List</h1>
-          <ul className="list-disc pl-5">
+          <ol className="list-decimal pl-5"> 
             {recipes.map((recipe, index) => (
               <li key={index} className="mb-2">
                 {recipe}
               </li>
             ))}
-          </ul>
+          </ol>
         </div>
       ) : (
         <h1 className="text-2xl font-bold mb-4 text-center">No recipes yet</h1>
