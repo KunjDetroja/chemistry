@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './index.css'; // Adjust the path if needed
 
 
 function App() {
@@ -237,7 +236,7 @@ function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline bg-black">
+      <h1 className="text-3xl font-bold text-center py-5">
         Welcome to my Chemistry lab
       </h1>
       <div className="p-4 max-w-md mx-auto relative">
