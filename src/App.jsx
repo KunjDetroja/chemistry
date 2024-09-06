@@ -208,6 +208,7 @@ function App() {
   const handleSelectProduct = (product) => {
     setSearchTerm(product);
     setDropdownVisible(false);
+    setRecipes([]);
     createItem(product);
   };
 
